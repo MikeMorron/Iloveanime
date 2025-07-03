@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://images3.alphacoders.com/555/555568.jpg);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+header {
+    color: #ffffff;
+    padding: 0.125rem 0;
+    text-align: center;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 2.5rem;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10.5rem;
+    top: 140%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.375rem;
+    /* 22px */
+    padding: 0;
+    width: 2rem;
+    /* 32px */
+    height: 2rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    position: relative;
+    padding: 4rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 90% opaco, igual que login */
+    border-radius: 1.5rem;
+    max-width: 40rem;
+    margin: 2.5rem auto;
+    border: none;
+    box-shadow: inset 0 0 0 0 transparent;
+    backdrop-filter: blur(0.5rem);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3125rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 3.125rem;
+}
+
+button {
+    width: 100%;
+    max-width: 18rem;
+    margin: 1.5rem auto 0 auto;
+    display: block;
+    padding: 1.205rem 0;
+    background-color: #81dbb9;
+    color: #fff;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+button .submitt {
+    margin: 0;
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    
+}
+
+button:hover {
+    background-color: #4fe63b;
+    border: 1rem;
+    border-color: red;
+}
+
+footer {
+    color: #111;
+    /* Letras negras */
+    text-align: center;
+    padding: 0.625rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 3px solid gold;
+    /* Línea dorada arriba */
+    background: transparent;
+}
+
+/* Hacer que vibre al encontrar error en registro */
+@keyframes vibrar {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-0.3125rem);
+    }
+
+    50% {
+        transform: translateX(0.3125rem);
+    }
+
+    75% {
+        transform: translateX(-0.3125rem);
+    }
+}
+
+.vibrar {
+    animation: vibrar 0.3s ease-in-out 2;
+    border: 2px solid red;
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 0.3125rem;
+}
+
+.dynamic-text {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 2.5em;
+    overflow: hidden;
+    color: #111;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.dynamic-text li {
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: dynamicText 6s linear infinite;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.dynamic-text li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dynamic-text li:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.dynamic-text li:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.dynamic-text h2,
+.dynamic-text b {
+    color: #111;
+    -webkit-text-stroke: 2px rgb(172, 170, 163);
+}
+
+@keyframes dynamicText {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.wrapper {
+    position: relative;
+    height: 2.5em;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.form-actions button {
+    width: 60%;
+    max-width: 14rem;
+    margin: 0;
+}
+
+.form-actions .login-link {
+    width: 40%;
+    text-align: right;
+    color: #1186e6;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.form-actions .login-link:hover {
+    color: #4fe63b;
+    text-decoration: underline;
+}
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}

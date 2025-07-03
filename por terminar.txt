@@ -1,0 +1,10 @@
+Esto falta hacer
+
+
+rellenar los nuevos grids con mas animes
+
+hacer que solo se muestren 24 caps y aparezca de primero el subido mas reciente
+
+cambiar el estilo de la navbar
+
+Mejorar el efecto de ultimo anime subido

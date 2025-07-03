@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar la navbar:", error));
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <section id="login-dynamic-text">
+        <div class="wrapper">
+            <ul class="dynamic-text">
+                <li>
+                    <h2><b>Bienvenido de nuevo</b></h2>
+                </li>
+                <li>
+                    <h2><b>Welcome Back</b></h2>
+                </li>
+                <li>
+                    <h2><b>お帰りなさい</b></h2>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="login-container">
+        <form>
+            <div class="input-group">
+                <label for="usuario">Nickname - Usuario</label>
+                <input type="text" id="usuario" name="usuario" placeholder="AnimeFan123" required
+                    pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com)$"
+                    title="Solo se permiten correos @gmail.com o @hotmail.com"></input>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="*********" oncopy="return false"
+                    oncut="return false" onpaste="return false" onselectstart="return false" noopener noreferrer>
+                <button type="button" class="toggle-password" onclick="togglePasswordLogin(this)">👁️</button>
+            </div>
+            <h5>¿No tienes cuenta? <a href="../register/register.html">Regístrate aquí</a></h5>
+            <br>
+            <!-- captcha -->
+            <div class="g-recaptcha" data-sitekey="TU_SITE_KEY" style="align-items: center;" required></div>
+            <br>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script src="scriptlog.js"></script>
+</body>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <p2> 2025 Mi Página de Anime. Todos los derechos reservados.</p2>
+</footer>
+
+</html>

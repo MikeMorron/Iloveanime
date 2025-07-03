@@ -1,0 +1,315 @@
+/* Reset y box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo y fuente general */
+body {
+    background-image: url(https://images3.alphacoders.com/757/757442.jpg);
+    background-size: 2200px;
+    background-position: top;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Contenedor principal del login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 80px 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input group */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    max-width: 95%;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    max-width: 480px;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 16px;
+    border: none;
+    margin-top: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor de contraseña */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+/* Botón de mostrar/ocultar contraseña */
+.password-container .toggle-password,
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    color: #333;
+    border-radius: 50%;
+}
+
+.password-container .toggle-password:hover,
+.password-container .toggle-password:focus {
+    background: none;
+    outline: none;
+}
+
+/* Centra los labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Botón principal */
+div button {
+    background-color: #9fc0e6;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    height: 50px;
+    margin: 30px auto 0 auto; /* Centrado y separación arriba */
+    position: relative;
+    justify-content: center;
+    width: 180px; /* Ajusta el ancho a tu gusto */
+    display: block;
+}
+
+button .submitt {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+
+}
+
+button:hover {
+    background-color: #1186e6;
+}
+
+/* Títulos */
+.dynamic-text {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 2.5em;
+    overflow: hidden;
+    color: #111; /* Letras negras */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.dynamic-text li {
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: dynamicText 6s linear infinite;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.dynamic-text h2, 
+.dynamic-text b {
+    color: #111; /* Letras negras */
+    -webkit-text-stroke: 2px rgba(223, 221, 213, 0.918); /* Borde dorado para navegadores Webkit */  
+    
+}
+
+.dynamic-text li:nth-child(1) { animation-delay: 0s; }
+.dynamic-text li:nth-child(2) { animation-delay: 2s; }
+.dynamic-text li:nth-child(3) { animation-delay: 4s; }
+
+@keyframes dynamicText {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    30% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.wrapper {
+    position: relative;
+    height: 2.5em;
+}
+
+h5 {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: -250px;
+}
+
+/* Main */
+main {
+    position: relative;
+    padding: 33px;
+    background-color: #f2f8f7;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Footer */
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 0 20px 0 gold; /* Sombra dorada */
+}
+/* Mensajes de error */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Animación de vibración para errores */
+@keyframes vibrar {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+.vibrar {
+    animation: vibrar 0.3s ease-in-out 2;
+    border: 2px solid red;
+    outline: none;
+}
+
+/* Layout responsivo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Grillas responsivas */
+@media (min-width: 1200px) {
+    .anime-grid { grid-template-columns: repeat(5, 1fr); }
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+    .anime-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .anime-grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .anime-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .anime-item {
+        width: 100%;
+        height: auto;
+    }
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Login y footer responsivo */
+@media (max-width: 500px) {
+    .login-container {
+        max-width: 95vw;
+        padding: 20px 5px;
+    }
+    input {
+        max-width: 95vw;
+    }
+}
+@media (max-width: 899px) {
+    footer {
+        display: none !important;
+        background: red;
+    }
+}
+
+/* Elementos comunes */
+header {
+    background-color: transparent;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    padding: 20px;
+    margin: 10px;
+    border-radius:5px;
+}

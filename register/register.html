@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar la navbar:", error));
+    </script>
+    <header>    </header>
+
+
+    <section id="register-dynamic-text">
+    <div class="wrapper">
+        <ul class="dynamic-text">
+            <li><h2><b>¡Crea tu cuenta!</b></h2></li>
+            <li><h2><b>Join the Community</b></h2></li>
+            <li><h2><b>アカウントを作成</b></h2></li>
+        </ul>
+    </div>
+</section>
+    <main>
+        <form id="form-registro">
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="AnimeFan123">
+            </div>
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required placeholder="iKZCt@example.com"
+                    pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com)$"
+                    title="Solo se permiten correos @gmail.com o @hotmail.com"></input>
+                <span id="correo-error" class="error-message"></span>
+            </div>
+            <div class="password-container">Contraseña:
+                <input type="password" id="contrasena" name="contrasena" required placeholder="*********"
+                    oncopy="return false" oncut="return false" onpaste="return false" onselectstart="return false">
+            </div>
+            <div class="password-container">Confirmar Contraseña:
+                <input type="password" id="contrasena2" name="contrasena2" required placeholder="*********"
+                    oncopy="return false" oncut="return false" onpaste="return false" onselectstart="return false" noopener noreferrer>
+                <button type="button" class="toggle-password" onclick="toggleBothPasswords(this)">👁️</button>
+            </div>
+            <div">
+                Ver y Ocultar las Contraseñas:
+            </div>
+            <br>
+            <br>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <div class="g-recaptcha" data-sitekey="TU_SITE_KEY" required></div>
+            <br>
+            <h5> ya tienes cuenta? <a href="../login/login.html">Inicia Sesión</a></h5>
+            <br>
+            <button type="submit">
+                <h5 class="submitt" noopener noreferrer>Crear Cuenta</h5></button>
+        </form>
+        <br>
+    </main>
+    <script src="scriptreg.js"></script>
+</body>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <p> 2025 Mi Página de Anime. Todos los derechos reservados.</p>
+</footer>
+
+</html>

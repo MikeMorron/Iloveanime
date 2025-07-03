@@ -1,0 +1,291 @@
+/* Estilos Responsivos */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 25rem;
+    /* Agrega un espacio de 40px entre el grid y el texto */
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*  (ver desbordamientos - deja el asterisco)   * {
+    outline: 1px solid rgba(255, 0, 0, 0.2);
+}*/
+
+body {
+    background: url('https://images.alphacoders.com/136/1363137.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Máximo 5 elementos por fila en pantallas grandes */
+/* Desktop grande: 1080p+ */
+@media (min-width: 1200px) {
+    .anime-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Tablets y laptops: 720p a 1079px */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .anime-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Móviles: hasta 480p (pero cubriendo hasta 768px) */
+@media (max-width: 768px) {
+    .anime-grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .anime-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .anime-item {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Estilos generales */
+.anime-item {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.anime-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.anime-item img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+}
+
+.anime-item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 15px;
+    border-color: rgb(185, 228, 213);
+    text-shadow: 1x 1px 2px rgba(190, 185, 185, 0.884);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedor-imagen {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.grid-item {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Centrar "Último Anime" debajo de "Descubre tus series" */
+.ultimo-anime-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+    /* Aumenta el tamaño en un 25% */
+    margin-top: -20rem;
+    /* Ajuste para que quede justo debajo del texto */
+    overflow: hidden;
+    /* Agrega esto para que el efecto de palpitación no se aplique a toda la página */
+}
+
+#anime-ultimo {
+    display: block;
+    margin: 10px auto 20px auto;
+    width: 30rem;
+    max-width: 500px;
+    position: relative;
+    height: 24rem;
+    top: 10rem;
+    left: 70rem;
+}
+
+/* Versión adaptada para pantallas menores a 768px */
+@media (max-width: 768px) {
+    #anime-ultimo {
+        width: 90%;
+        height: auto;
+        top: 2rem;
+        left: 0;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #anime-ultimo {
+        width: 90%;
+        /* Aumenta el tamaño en un 25% */
+        max-width: 375px;
+        /* Limita su tamaño en pantallas pequeñas */
+    }
+}
+
+#anime-ultimo:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    animation: orbit 5s linear infinite;
+}
+
+@keyframes orbit {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        transform: scale(1.5);
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes particle {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+#inicio {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-shadow:
+        -4px -4px 4px rgb(123, 126, 124),
+        4px -4px 4px rgb(88, 86, 86),
+        -4px 4px 4px rgb(157, 161, 158),
+        4px 4px 4px rgb(66, 65, 65);
+}
+
+/* Animación de glitch */
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+.glitch-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    overflow: hidden;
+}
+
+svg {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    display: block;
+}
+
+text {
+    fill: white;
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 50px;
+    text-anchor: middle;
+}
+
+.fragment {
+    animation: shatter 0.5s ease-out forwards, reassemble 1s 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes shatter {
+    from {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) rotate(var(--r));
+    }
+}
+
+@keyframes reassemble {
+    from {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) rotate(var(--r));
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+.dynamic-text h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.dynamic-text h2 span {
+    display: inline-block;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página de Anime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <script src="script.js" defer></script>
+    <!--llamar a la barra de navegacion con JS-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("../navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                })
+                .then(() => {
+                    // Asegurar que los eventos de la navbar siempre funcionen
+                    document.addEventListener("click", function (event) {
+                        if (event.target.matches(".nav-link")) { // Ajusta según tu HTML
+                            event.preventDefault();
+                            const target = event.target.getAttribute("href");
+                            document.querySelector(target).scrollIntoView({ behavior: "smooth" });
+                        }
+                    });
+                })
+                .catch(error => console.error("Error cargando la barra de navegación:", error));
+        });
+
+    </script>
+
+
+<script src="others/glitch_effect.js"></script>
+
+<section id="inicio">
+    <div class="wrapper">
+        <ul class="dynamic-text" style="color: blanchedalmond; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+            <li>
+                <h2><b>Nuevo Anime Subido</b></h2>
+            </li>
+            <li>
+                <h2><b>New Anime Uploaded</b></h2>
+            </li>
+            <li>
+                <h2><b>新しいアニメをアップロードしました</b></h2>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="ultimo-anime" class="anime-grid">
+    <div class="anime-item" id="anime-ultimo">
+        <img src="https://cdn.animenewsnetwork.com/thumbnails/max700x700/cms/feature/197795/oshi-no-ko-vol-1.jpg"
+            alt="Oshi no Ko" style="width: 100%; height: auto;">
+        <h3 id="anime-upd">Oshi no Ko</h3>
+    </div>
+</section>
+
+    <br>
+    
+    <section id="animes">
+        <div class="anime-grid">
+            <div class="anime-item">
+                <img src="images/11.jpg" alt="Akatsuki Koujou">
+                <h3>Akatsuki Koujou</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/jujutsu kaisen.jpeg" alt="Jujutsu Kaisen">
+                <h3>Jujutsu Kaisen</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/kimetsu.png" alt="Kimetsu no Yaiba">
+                <h3>Kimetsu no Yaiba</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/kimi no nawa.png" alt="Kimi no Namae Wa?">
+                <h3>Kimi no Namae Wa?</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/naruto.png" alt="Naruto">
+                <h3>Naruto</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/one piede.jpg" alt="One Piece">
+                <h3>One Piece</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/pokemon.png" alt="Pokemon">
+                <h3>Pokemon</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/sao.jpg" alt="Sword Art Online">
+                <h3>Sword Art Online</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/spyxfamily.png" alt="Spy X Family">
+                <h3>Spy X Family</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/go-hanayome.jpg" alt="Gotoubun no Hanayome">
+                <h3>Gotoubun no Hanayome</h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>
+            <div class="anime-item">
+                <img src="images/" alt="">
+                <h3></h3>
+            </div>            
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML("afterbegin", data);
+                })
+                .catch(error => console.error("Error cargando la barra de navegación:", error));
+        });
+    </script>
+</body>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <p> 2025 Mi Página de Anime. Todos los derechos reservados.</p>
+</footer>
+</html>
