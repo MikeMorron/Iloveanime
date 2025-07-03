@@ -67,3 +67,49 @@ document.addEventListener('DOMContentLoaded', () => {
         //}
     //});
 //})();
+
+document.querySelectorAll('.anime-item h3').forEach(h3 => {
+    const length = h3.textContent.length;
+
+    if (length > 40) {
+        h3.style.fontSize = '0.8rem';
+        h3.style.whiteSpace = 'normal';
+        h3.style.display = '-webkit-box';
+        h3.style.webkitLineClamp = '2';
+        h3.style.webkitBoxOrient = 'vertical';
+        h3.style.overflow = 'hidden';
+        h3.style.textOverflow = 'ellipsis';
+    } else if (length > 30) {
+        h3.style.fontSize = '0.8rem';
+        h3.style.whiteSpace = 'normal';
+        h3.style.display = '-webkit-box';
+        h3.style.webkitLineClamp = '2';
+        h3.style.webkitBoxOrient = 'vertical';
+        h3.style.overflow = 'hidden';
+        h3.style.textOverflow = 'ellipsis';
+    } else if (length > 20) {
+        h3.style.fontSize = '1rem';
+        h3.style.whiteSpace = 'normal';
+        h3.style.display = '-webkit-box';
+        h3.style.webkitLineClamp = '2';
+        h3.style.webkitBoxOrient = 'vertical';
+        h3.style.overflow = 'hidden';
+        h3.style.textOverflow = 'ellipsis';
+    } else if (length > 10) {
+        h3.style.fontSize = '1.4rem';
+        h3.style.whiteSpace = 'normal';
+        h3.style.display = '-webkit-box';
+        h3.style.webkitLineClamp = '2';
+        h3.style.webkitBoxOrient = 'vertical';
+        h3.style.overflow = 'hidden';
+        h3.style.textOverflow = 'ellipsis';
+    } else {
+        h3.style.fontSize = '1rem';
+        h3.style.whiteSpace = 'normal';
+        h3.style.display = '-webkit-box';
+        h3.style.webkitLineClamp = '2';
+        h3.style.webkitBoxOrient = 'vertical';
+        h3.style.overflow = 'hidden';
+        h3.style.textOverflow = 'ellipsis';
+    }
+});

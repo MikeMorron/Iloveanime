@@ -7,4 +7,4 @@ hacer que solo se muestren 24 caps y aparezca de primero el subido mas reciente
 
 cambiar el estilo de la navbar
 
-Mejorar el efecto de ultimo anime subido
+Mejorar el efecto de ultimo anime subido, que el titulo no sale como es no se adapta el js ni el css, y hacer que se actualice solo en orden de ultimo subido.

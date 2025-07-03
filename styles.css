@@ -97,17 +97,20 @@ body {
 }
 
 .anime-item h3 {
-    font-size: 20px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     margin-top: 10px;
     color: #ffffff;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    border: 15px;
-    border-color: rgb(185, 228, 213);
-    text-shadow: 1x 1px 2px rgba(190, 185, 185, 0.884);
+    max-width: 100%;
+    text-shadow: 1px 1px 2px rgba(190, 185, 185, 0.884);
+    min-height: 2.5em;
 }
 
 footer {
