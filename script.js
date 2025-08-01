@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     // Obtener todos los elementos de anime
     const animeItems = document.querySelectorAll('.anime-item');
@@ -14,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Información del último anime subido
     const ultimoAnime = {
-        img: 'https://cdn.animenewsnetwork.com/thumbnails/max700x700/cms/feature/197795/oshi-no-ko-vol-1.jpg', // Cambia por la ruta real de la imagen
+        img: 'C:\Users\Mike\Desktop\proyect\images\Make Heroine.png', // Cambia por la ruta real de la imagen
         titulo: 'Título del Último Anime', // Cambia por el título real
-        url: 'https://enlace-al-ultimo-anime.com' // Cambia por el enlace real
+        url: '' // Cambia por el enlace real
     };
 
     // Actualiza el contenido del último anime
@@ -55,24 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+setTimeout(function () {
+    document.querySelector('footer').classList.add('ocultar');
+}, 5000); // Tiempo en milisegundos (10 segundos)
+
 // ver desbordamientos, quitar solo los //
 //(function () {
-    //const docWidth = document.documentElement.offsetWidth;
-    //const elements = [...document.querySelectorAll('*')];
+//const docWidth = document.documentElement.offsetWidth;
+//const elements = [...document.querySelectorAll('*')];
 
-    //elements.forEach(el => {
-        //if (el.offsetWidth > docWidth) {
-            //console.warn('Elemento desbordado:', el);
-            //el.style.border = '2px dashed red'; // Visual para que lo veas en la página
-        //}
-    //});
+//elements.forEach(el => {
+//if (el.offsetWidth > docWidth) {
+//console.warn('Elemento desbordado:', el);
+//el.style.border = '2px dashed red'; // Visual para que lo veas en la página
+//}
+//});
 //})();
 
 document.querySelectorAll('.anime-item h3').forEach(h3 => {
     const length = h3.textContent.length;
 
     if (length > 40) {
-        h3.style.fontSize = '0.8rem';
+        h3.style.fontSize = '1.5rem';
         h3.style.whiteSpace = 'normal';
         h3.style.display = '-webkit-box';
         h3.style.webkitLineClamp = '2';
@@ -80,7 +85,7 @@ document.querySelectorAll('.anime-item h3').forEach(h3 => {
         h3.style.overflow = 'hidden';
         h3.style.textOverflow = 'ellipsis';
     } else if (length > 30) {
-        h3.style.fontSize = '0.8rem';
+        h3.style.fontSize = '1.5rem';
         h3.style.whiteSpace = 'normal';
         h3.style.display = '-webkit-box';
         h3.style.webkitLineClamp = '2';
@@ -88,7 +93,7 @@ document.querySelectorAll('.anime-item h3').forEach(h3 => {
         h3.style.overflow = 'hidden';
         h3.style.textOverflow = 'ellipsis';
     } else if (length > 20) {
-        h3.style.fontSize = '1rem';
+        h3.style.fontSize = '1.5rem';
         h3.style.whiteSpace = 'normal';
         h3.style.display = '-webkit-box';
         h3.style.webkitLineClamp = '2';
@@ -96,7 +101,7 @@ document.querySelectorAll('.anime-item h3').forEach(h3 => {
         h3.style.overflow = 'hidden';
         h3.style.textOverflow = 'ellipsis';
     } else if (length > 10) {
-        h3.style.fontSize = '1.4rem';
+        h3.style.fontSize = '1.5rem';
         h3.style.whiteSpace = 'normal';
         h3.style.display = '-webkit-box';
         h3.style.webkitLineClamp = '2';
@@ -104,7 +109,7 @@ document.querySelectorAll('.anime-item h3').forEach(h3 => {
         h3.style.overflow = 'hidden';
         h3.style.textOverflow = 'ellipsis';
     } else {
-        h3.style.fontSize = '1rem';
+        h3.style.fontSize = '1.5rem';
         h3.style.whiteSpace = 'normal';
         h3.style.display = '-webkit-box';
         h3.style.webkitLineClamp = '2';

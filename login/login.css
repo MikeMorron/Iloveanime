@@ -8,6 +8,7 @@
 /* Fondo y fuente general */
 body {
     background-image: url(https://images3.alphacoders.com/757/757442.jpg);
+    background-repeat: no-repeat;
     background-size: 2200px;
     background-position: top;
     font-family: Arial, sans-serif;
@@ -76,7 +77,7 @@ input {
 .password-container .toggle-password,
 .toggle-password {
     position: absolute;
-    right: 10px;
+    right: 4px;
     top: 30%;
     transform: translateY(-50%);
     background: none;
@@ -87,11 +88,6 @@ input {
     width: 32px;
     height: 32px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: none;
-    color: #333;
-    border-radius: 50%;
 }
 
 .password-container .toggle-password:hover,
@@ -203,17 +199,24 @@ main {
     max-width: 400px;
     margin: 20px auto;
 }
-
 /* Footer */
 footer {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 0 20px 0 gold; /* Sombra dorada */
+    box-shadow: 0 0 20px 0 gold;
+    /* Sombra dorada */
 }
+
+@keyframes desaparecer {
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Mensajes de error */
 .error-message {
     color: red;
@@ -239,6 +242,11 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.heart{
+    color: rgb(17, 219, 255);
+    font-size: 22px
 }
 
 /* Grillas responsivas */
@@ -313,3 +321,42 @@ section {
     margin: 10px;
     border-radius:5px;
 }
+
+    .navbar-inverse {
+        background-color: #1c1c1c;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .navbar-inverse .navbar-brand:hover {
+        color: #f06292;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #ddd;
+        transition: color 0.3s;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover {
+        color: #f06292;
+    }
+
+    /* Íconos de usuario y login */
+    .glyphicon {
+        margin-right: 5px;
+    }
+
+    /* Estilo del corazón */
+    .heart {
+        color: #f06292;
+        font-weight: bold;
+    }
+
+

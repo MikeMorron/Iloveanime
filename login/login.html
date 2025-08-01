@@ -6,28 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../adaptative.css">
 </head>
 
 <body>
-    <div id="navbar-container"></div>
-    <script>
-        fetch("../navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("navbar-container").innerHTML = data;
-            })
-            .catch(error => console.error("Error al cargar la navbar:", error));
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.getElementById("menu-toggle");
-            const navLinks = document.querySelector(".nav-links");
-
-            menuToggle.addEventListener("click", function () {
-                navLinks.classList.toggle("active");
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <nav class="navbar navbar-inverse" oncopy="return false" oncut="return false" onpaste="return false"
+        onselectstart="return false">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">I<text class="heart">♥</text>Anime</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/register/register.html"><span class="glyphicon glyphicon-user"></span> Registrarse</a>
+                </li>
+                <li><a href="/login/login.html"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <section id="login-dynamic-text">
         <div class="wrapper">
@@ -62,7 +59,8 @@
             <h5>¿No tienes cuenta? <a href="../register/register.html">Regístrate aquí</a></h5>
             <br>
             <!-- captcha -->
-            <div class="g-recaptcha" data-sitekey="6LchoHUrAAAAAG8-jLHTHZheY5djH-CXBu6yxGJw" style="align-items: center;" required></div>
+            <div class="g-recaptcha" data-sitekey="6LchoHUrAAAAAG8-jLHTHZheY5djH-CXBu6yxGJw"
+                style="align-items: center;" required></div>
             <br>
             <button type="submit">Entrar</button>
         </form>

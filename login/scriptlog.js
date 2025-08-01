@@ -52,3 +52,8 @@ function togglePasswordLogin(btn) {
     pass.type = isHidden ? "text" : "password";
     btn.textContent = isHidden ? "🙈" : "👁️";
 }
+
+    //footer fade out
+    setTimeout(function () {
+    document.querySelector('footer').classList.add('ocultar');
+}, 3000); // Tiempo en milisegundos (10 segundos)

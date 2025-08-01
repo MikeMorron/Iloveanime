@@ -1,92 +1,82 @@
-/* Estilos Responsivos */
-.anime-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 25rem;
-    /* Agrega un espacio de 40px entre el grid y el texto */
+body {
+    background: url('/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: 20px;
 }
 
-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.heart {
+    color: red;
+    font-size: 22px
 }
 
 /*  (ver desbordamientos - deja el asterisco)   * {
     outline: 1px solid rgba(255, 0, 0, 0.2);
 }*/
-
-body {
-    background: url('https://images.alphacoders.com/136/1363137.png') no-repeat center center fixed;
-    background-size: cover;
+.span-box {
+    background: #08080894;
+    border-radius: 10%;
+    position: relative;
+    border-left: 3px solid;
+    border-right: 3px solid;
+    width: 58%;
+    height: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 15px;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
-/* Máximo 5 elementos por fila en pantallas grandes */
-/* Desktop grande: 1080p+ */
-@media (min-width: 1200px) {
-    .anime-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+.anime-name-updt {
+    font-family: Impact;
+    box-shadow: 10px 10px, 10px 10px hsl(40, 50, 50);
+    padding-left: 10px;
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
-/* Tablets y laptops: 720p a 1079px */
-@media (min-width: 769px) and (max-width: 1199px) {
-    .anime-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
-}
-
-/* Móviles: hasta 480p (pero cubriendo hasta 768px) */
-@media (max-width: 768px) {
-    .anime-grid {
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
-        gap: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .anime-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .anime-item {
-        width: 100%;
-        height: auto;
-    }
-
-    footer {
-        font-size: 12px;
-    }
+/* Estilos Responsivos */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilos generales */
 .anime-item {
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 8%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+.anime-ultimo:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px 1px rgba(253, 241, 187, 0.9);
 }
 
 .anime-item:hover {
     transform: translateY(-5px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px 20px 1px rgba(253, 241, 187, 0.9);
 }
 
 .anime-item img {
@@ -97,30 +87,62 @@ body {
 }
 
 .anime-item h3 {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    margin-top: 10px;
+    box-sizing: border-box;
+    margin-top: 7px;
     color: #ffffff;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Limita a 2 líneas */
-    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 100%;
+    padding-left: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
-    text-shadow: 1px 1px 2px rgba(190, 185, 185, 0.884);
-    min-height: 2.5em;
+    word-wrap: break-word;
 }
 
-footer {
-    background-color: #333;
+.anime-ultimo-grid {
+    display: flex;
+    box-sizing: border-box;
+    background: #08080894;
+    cursor: pointer;
+    width: 50vw;
+    height: 28vh;
+    border-radius: 1px;
+    margin: 0 auto;
     color: #fff;
+}
+
+.anime-ultimo-grid img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 20px 20px 10px;
+    padding-right: 10px;
+}
+
+/* Footer */
+footer {
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 0 20px 0 gold;
+    /* Sombra dorada */
+}
+
+@keyframes desaparecer {
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Aplicamos la animación a nuestro footer */
+.ocultar {
+    animation-name: desaparecer;
+    animation-duration: 2s;
+    /* Tiempo en segundos (opcional) */
+    animation-fill-mode: forwards;
+    /* Evita que el elemento regrese a su estado original después de la animación (opcional) */
 }
 
 .contenedor-imagen {
@@ -135,87 +157,6 @@ footer {
 }
 
 /* Centrar "Último Anime" debajo de "Descubre tus series" */
-.ultimo-anime-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 200px;
-    /* Aumenta el tamaño en un 25% */
-    margin-top: -20rem;
-    /* Ajuste para que quede justo debajo del texto */
-    overflow: hidden;
-    /* Agrega esto para que el efecto de palpitación no se aplique a toda la página */
-}
-
-#anime-ultimo {
-    display: block;
-    margin: 10px auto 20px auto;
-    width: 30rem;
-    max-width: 500px;
-    position: relative;
-    height: 24rem;
-    top: 10rem;
-    left: 70rem;
-}
-
-/* Versión adaptada para pantallas menores a 768px */
-@media (max-width: 768px) {
-    #anime-ultimo {
-        width: 90%;
-        height: auto;
-        top: 2rem;
-        left: 0;
-        margin: 0 auto 20px auto;
-    }
-}
-
-@media (max-width: 768px) {
-    #anime-ultimo {
-        width: 90%;
-        /* Aumenta el tamaño en un 25% */
-        max-width: 375px;
-        /* Limita su tamaño en pantallas pequeñas */
-    }
-}
-
-#anime-ultimo:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-    animation: orbit 5s linear infinite;
-}
-
-@keyframes orbit {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-    }
-
-    100% {
-        transform: scale(1.5);
-        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
-    }
-}
-
-@keyframes particle {
-
-    0%,
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translate(-50%, -50%) scale(1.5);
-        opacity: 0.5;
-    }
-}
 
 #inicio {
     text-align: center;
@@ -249,7 +190,6 @@ svg {
 
 text {
     fill: white;
-    font-family: 'Share Tech Mono', sans-serif;
     font-size: 50px;
     text-anchor: middle;
 }
@@ -257,6 +197,15 @@ text {
 .fragment {
     animation: shatter 0.5s ease-out forwards, reassemble 1s 0.6s ease-out forwards;
     opacity: 0;
+}
+
+.dynamic-text {
+    color: blanchedalmond;
+    font-style: italic;
+    font-variant: small-caps;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: 1s;
+    padding: 20px;
 }
 
 @keyframes shatter {
@@ -283,12 +232,48 @@ text {
     }
 }
 
-.dynamic-text h2 {
-    font-size: 24px;
-    text-align: center;
+/* Versión adaptada para pantallas menores a 768px */
+@media (max-width: 768px) {
+    #anime-ultimo {
+        width: 90%;
+        height: auto;
+        top: 2rem;
+        left: 0;
+        margin: 0 auto 20px auto;
+    }
 }
 
-.dynamic-text h2 span {
-    display: inline-block;
-    letter-spacing: 2px;
+@media (max-width: 768px) {
+    #anime-ultimo {
+        width: 90%;
+        /* Aumenta el tamaño en un 25% */
+        max-width: 375px;
+        /* Limita su tamaño en pantallas pequeñas */
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        transform: scale(1.5);
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes particle {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
 }

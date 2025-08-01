@@ -124,3 +124,9 @@ function toggleBothPasswords(btn) {
     const isHidden = pass1.type === "password";
     pass1.type = pass2.type = isHidden ? "text" : "password";
     btn.textContent = isHidden ? "🙈" : "👁️";}
+
+
+    //footer fade out
+    setTimeout(function () {
+    document.querySelector('footer').classList.add('ocultar');
+}, 3000); // Tiempo en milisegundos (10 segundos)

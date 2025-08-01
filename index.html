@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+<title>IloveAnime</title>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página de Anime</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -37,36 +36,43 @@
 
     </script>
 
+    <script src="others/glitch_effect.js"></script>
 
-<script src="others/glitch_effect.js"></script>
+    <section id="inicio">
+        <div class="wrapper">
+            <ul class="dynamic-text">
+                <li>
+                    <h2><b>Nuevo Anime Subido</b></h2>
+                </li>
+                <li>
+                    <h2><b>New Anime Uploaded</b></h2>
+                </li>
+                <li>
+                    <h2><b>新しいアニメをアップロードしました</b></h2>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="ultimo-anime" class="anime-ultimo-grid" oncopy="return false" oncut="return false"
+        onpaste="return false" onselectstart="return false" noopener noreferrer>
+        <div class="anime-ultimo" id="anime-ultimo">
+            <img src="/images/Make Heroine.png" alt="Make Heroine Ga Oosigiru">
+        </div>
+        <div class="span-box">
+            <h3 id="anime-upd" class="anime-name-updt">Make Heroine Ga Oosigiru</h3><b>Generos: </b>Escolar, Romance, Drama. <br><br>
+            La historia sigue a Kazuhiko Nukumizu, un chico callado en la escuela. Por casualidad, él es testigo del
+            rechazo de Anna Yanami, una de las chicas populares de su clase, por parte de su amigo de la infancia, lo
+            que les lleva a estrechar lazos. Este suceso desencadena una serie de encuentros entre Kazuhiko y otras
+            chicas de la escuela que también han sido rechazadas, al igual que Anna.
+        </div>
 
-<section id="inicio">
-    <div class="wrapper">
-        <ul class="dynamic-text" style="color: blanchedalmond; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-            <li>
-                <h2><b>Nuevo Anime Subido</b></h2>
-            </li>
-            <li>
-                <h2><b>New Anime Uploaded</b></h2>
-            </li>
-            <li>
-                <h2><b>新しいアニメをアップロードしました</b></h2>
-            </li>
-        </ul>
-    </div>
-</section>
-<section id="ultimo-anime" class="anime-grid">
-    <div class="anime-item" id="anime-ultimo">
-        <img src="https://cdn.animenewsnetwork.com/thumbnails/max700x700/cms/feature/197795/oshi-no-ko-vol-1.jpg"
-            alt="Oshi no Ko" style="width: 100%; height: auto;">
-        <h3 id="anime-upd">Oshi no Ko</h3>
-    </div>
-</section>
+    </section>
 
     <br>
-    
+
     <section id="animes">
-        <div class="anime-grid">
+        <div class="anime-grid" oncopy="return false" oncut="return false" onpaste="return false"
+            onselectstart="return false" noopener noreferrer>
             <div class="anime-item">
                 <img src="images/11.jpg" alt="Akatsuki Koujou">
                 <h3>Akatsuki Koujou</h3>
@@ -124,14 +130,16 @@
                 <h3>No Game no Life</h3>
             </div>
             <div class="anime-item">
-                <img src="images/rokudenashi majutsu koushi to akashic records.jpg" alt="Rokudenashi Majutsu to Akashic Records">
+                <img src="images/rokudenashi majutsu koushi to akashic records.jpg"
+                    alt="Rokudenashi Majutsu to Akashic Records">
                 <h3>Rokudenashi Majutsu to Akashic Records</h3>
-            </div>           
+            </div>
+            <div class="anime-item">
+                <img src="images/totoro.png" alt="My totoro's Neighbor">
+                <h3>Totoro</h3>
+            </div>
         </div>
     </section>
-
-    <script src="script.js"></script>
-
 
     <script src="script.js"></script>
     <script>
@@ -144,12 +152,14 @@
                 .catch(error => console.error("Error cargando la barra de navegación:", error));
         });
     </script>
+
 </body>
 <br>
 <br>
 <br>
 <br>
 <footer>
-    <p> 2025 Mi Página de Anime. Todos los derechos reservados.</p>
+    <p2> 2025 Mi Página de Anime. Todos los derechos reservados.</p2>
 </footer>
+
 </html>
