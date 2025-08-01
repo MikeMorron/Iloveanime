@@ -15,20 +15,20 @@ body {
 }*/
 .span-box {
     background: #08080894;
-    border-radius: 10%;
-    position: absolute;
+    border-radius: 10px;
     border-left: 3px solid;
     border-right: 3px solid;
-    width: 28%;
-    height: 28%;
-    margin: 0 auto;
     padding: 10px;
     font-size: 15px;
-    max-width: 80%;
+    width: 100%;
+    /* Ocupa el espacio restante */
+    height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    margin-left: 42rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .anime-name-updt {
@@ -102,7 +102,7 @@ body {
 
 .anime-ultimo-grid {
     display: flex;
-    box-sizing: border-box;
+    align-items: center;
     background: #08080894;
     cursor: pointer;
     width: 50vw;
@@ -110,14 +110,20 @@ body {
     border-radius: 15px;
     margin: 0 auto;
     color: #fff;
+    overflow: hidden;
+    /* Nada se sale */
+    padding: 10px;
 }
 
 .anime-ultimo-grid img {
-    width: 22%;
-    height: 28%;
-    border-radius: 20px;
-    padding: 10px;
-    position: absolute;
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    /* Imagen completa sin deformarse */
+    margin-right: 15px;
+    position: relative;
+    /* ya no absoluta */
 }
 
 /* Footer */
