@@ -13,12 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Información del último anime subido
-    const ultimoAnime = {
-        img: 'C:\Users\Mike\Desktop\proyect\images\Make Heroine.png', // Cambia por la ruta real de la imagen
-        titulo: 'Título del Último Anime', // Cambia por el título real
-        url: '' // Cambia por el enlace real
-    };
 
     // Actualiza el contenido del último anime
     const animeUltimo = document.getElementById('anime-ultimo');
