@@ -16,18 +16,19 @@ body {
 .span-box {
     background: #08080894;
     border-radius: 10%;
-    position: relative;
+    position: absolute;
     border-left: 3px solid;
     border-right: 3px solid;
-    width: 58%;
-    height: 100%;
-    padding: 10px;
+    width: 28%;
+    height: 2%;
     margin: 0 auto;
+    padding: 10px;
     font-size: 15px;
     max-width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+    margin-left: 42rem;
 }
 
 .anime-name-updt {
@@ -106,16 +107,17 @@ body {
     cursor: pointer;
     width: 50vw;
     height: 28vh;
-    border-radius: 1px;
+    border-radius: 15px;
     margin: 0 auto;
     color: #fff;
 }
 
 .anime-ultimo-grid img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 20px 20px 10px;
-    padding-right: 10px;
+    width: 22%;
+    height: 28%;
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
 }
 
 /* Footer */
